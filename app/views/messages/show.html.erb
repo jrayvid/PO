@@ -2,6 +2,14 @@
 
 <p><%= @message.opinion %></p>
 
+
+<h2>Comments</h2>
+
+
+<%= render @message.comments %>
+<h2>Reply To Opinion</h2>
+<%= render'comments/form' %>
+
 <%= link_to "Edit", edit_message_path %>
 <%= link_to "Home", root_path %>
 <%= link_to "Delete", message_path(@message), method: :delete, data: {confirm: "ARE YOU SURE?  THIS CAN'T BE UNDONE"} %>
