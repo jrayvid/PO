@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
 	before_action :find_message
 	before_action :find_comment, only: [:edit, :update, :destroy]
+	before_action :authenticate_user!
 
 
 	def create
@@ -15,11 +16,12 @@ class CommentsController < ApplicationController
 	end
 
 	def edit
+		
 	end
 
 	def update
 		if @comment.update(comment_params)
-			redirect_to message_path
+			redirect_to message_path(@message)
 		else
 			render 'edit'
 		end
