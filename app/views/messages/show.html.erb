@@ -1,0 +1,8 @@
+<h1><%= @message.title %></h1>
+
+<p><%= @message.opinion %></p>
+
+<%= link_to "Edit", edit_message_path %>
+<%= link_to "Home", root_path %>
+<%= link_to "Delete", message_path(@message), method: :delete, data: {confirm: "ARE YOU SURE?  THIS CAN'T BE UNDONE"} %>
+
