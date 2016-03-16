@@ -15,3 +15,24 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+// this is where the index page starts
+
+.index {
+	background-image: url('/assets/americanflag.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+
+
+}
+
+
+
+.opinionbox {
+	box-sizing: border-box;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	background-color: gray;
+
+}
