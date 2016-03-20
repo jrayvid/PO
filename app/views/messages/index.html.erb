@@ -1,18 +1,25 @@
-<body class ="index"> </body>
+<div class="index">
 
-<% @messages.each do |message| %>
+		
 
+		<% @messages.each do |message| %>
 
-<div class="col-md-4">
-	<div class="opinionbox"
-	<h2><%= message.title %></h2><br>
-	<%= link_to "View Message", message_path(message), class: "btn btn-default"%>
-	</div>
+	
+				<div class="col-md-4">
+					<div class="opinionbox">
+				<h2><%= message.title %></h2><br>
+				<%= link_to "View Message", message_path(message), class: "btn btn-default"%>
+					</div>
+				</div>
+			
+
+			<% end %>
+
+	
+		
+
 </div>
 
-<% end %>
-
-
-<%= link_to "New Message", new_message_path %>
+<%= render 'layouts/footer_mess' %>
 
 
